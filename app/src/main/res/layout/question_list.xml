@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+    <TextView
+        android:id="@+id/que_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="우리는 이 앱을 언제 어디서 누가 어떻게 왜 무엇을 하는지?"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#2584CF"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/que_tagRecycler"
+        android:layout_below="@id/que_title"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_below="@id/que_tagRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/que_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#636363"
+            android:text="날짜"/>
+
+            <TextView
+            android:id="@+id/que_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:textColor="#2584CF"
+            android:text="닉네임"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/que_nick"
+        android:background="#AAAAAA"/>
+
+</LinearLayout>
